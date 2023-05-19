@@ -5,7 +5,6 @@ const bcrypt = require("bcrypt");
 module.exports = {
   create,
   login,
-  checkToken,
 };
 
 // This function fires when a request is made to /api/users POST
@@ -42,14 +41,6 @@ async function login(req, res) {
   } catch {
     res.status(400).json("Bad Credentials");
   }
-}
-
-// controllers/api/users.js
-
-function checkToken(req, res) {
-  // req.user will always be there for you when a token is sent
-  console.log("req.user", req.user);
-  res.json(req.exp);
 }
 
 /*-- Helper Functions --*/

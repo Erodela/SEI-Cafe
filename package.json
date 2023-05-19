@@ -1,6 +1,6 @@
 {
   "proxy": "http://localhost:3001",
-  "name": "mern-infrastructure",
+  "name": "sei-cafe",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,9 +23,12 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "concurrently \"nodemon server.js\" \"npm start\"",
+    "seed": "node config/seed.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prod-build": "npm i && npm run build",
+    "prod-start": "node server.js"
   },
   "eslintConfig": {
     "extends": [
